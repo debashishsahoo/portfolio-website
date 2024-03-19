@@ -1,0 +1,43 @@
+.item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+    color: white;
+    background: #19376d;
+    border-radius: 1em;
+    padding: 24px;
+    margin-bottom: 1em;
+    max-width: 100%;
+}
+
+.image {
+    border-radius: 50%;
+}
+
+.itemDetails {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-left: 1em;
+    flex: 5
+}
+
+.itemDetails h3 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.itemDetails h4 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.itemDetails li {
+    list-style-type: disc;
+}

@@ -13,7 +13,16 @@ interface CardProps {
 
 export default function Card({ image, title, subtitle, startDate, endDate, description }: CardProps) {
     return (
-        <div className={styles.item}>        
+        <div className={styles.item}>    
+            <div className={styles.image}>
+                <Image 
+                    src={image}
+                    alt="logo"
+                    width={150}
+                    height={150}
+                />
+            </div>
+            
             <div className={styles.itemDetails}>
                 <h3>{`${title}`}</h3>
                 <h4>{Array.isArray(subtitle) ? `${subtitle.join(', ')}` : subtitle}</h4>

@@ -4,6 +4,7 @@ export const projects: Project[] = [
     {
         "logoSrc": "/media/music_mates.png",
         "name": "MusicMates",
+        "url": "https://github.com/debashishsahoo/music-mates-iOS",
         "tools": ["Swift", "Firebase"],
         "startDate": "May 2023",
         "endDate": "Jun 2023",
@@ -17,6 +18,7 @@ export const projects: Project[] = [
     {
         "logoSrc": "/media/work_plus.svg",
         "name": "WorkPlus",
+        "url": "https://github.com/debashishsahoo/work-plus",
         "tools": ["Python", "Django", "HTML", "CSS"],
         "startDate": "Mar 2021",
         "endDate": null,
@@ -31,6 +33,7 @@ export const projects: Project[] = [
     {
         "logoSrc": "/media/weather_board.svg",
         "name": "Weather Board",
+        "url": "https://github.com/debashishsahoo/weather-board",
         "tools": ["ReactJS", "Tailwind CSS"],
         "startDate": "Dec 2022",
         "endDate": null,
@@ -42,6 +45,7 @@ export const projects: Project[] = [
     {
         "logoSrc": "/media/todo_mate.svg",
         "name": "Todo Mate",
+        "url": "https://github.com/debashishsahoo/todo-list",
         "tools": ["JavaScript", "HTML", "CSS"],
         "startDate": "Dec 2021",
         "endDate": null,
@@ -53,6 +57,7 @@ export const projects: Project[] = [
     {
         "logoSrc": "/media/aus_vaccine_tracker.svg",
         "name": "Australia COVID-19 Vaccine Tracker",
+        "url": "https://github.com/debashishsahoo/aus-vaccine-tracker",
         "tools": ["JavaScript", "HTML", "CSS"],
         "startDate": "Oct 2021",
         "endDate": null,
@@ -65,6 +70,7 @@ export const projects: Project[] = [
     {
         "logoSrc": "/media/project_x.svg",
         "name": "ProjectX",
+        "url": "https://github.com/debashishsahoo/project-x",
         "tools": ["Python (Django)", "MySQL", "HTML", "CSS"],
         "startDate": "Aug 2020",
         "endDate": null,

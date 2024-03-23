@@ -22,6 +22,7 @@ export default function Experience({ experience }: Props) {
                             key={id}
                             image={item.logoSrc}
                             title={item.company}
+                            url={null}
                             subtitle={item.role}
                             startDate={item.startDate}
                             endDate={item.endDate}

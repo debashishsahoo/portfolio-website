@@ -17,7 +17,7 @@ export default function Hero() {
         </div>
 
         <div className={styles.bio}>
-            A computer science student with a passion for software development.<br></br><br></br>
+            Final year computer science student with a passion for technology and software development.<br></br><br></br>
             Currently working as an iOS Engineer Intern at ANZ and a Software Engineer at Monash Human Power.<br></br><br></br>
             Experience with Swift, Python, React, and various technologies.<br></br>
         </div>

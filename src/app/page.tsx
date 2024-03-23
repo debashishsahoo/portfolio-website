@@ -7,7 +7,7 @@ import { projects } from "./data/projects";
 export default function Home() {
   return (
     <main className="flex bg-[#121010]">
-      <div className="container px-12 py-150 mx-auto">
+      <div className="container px-8 py-150 mx-auto">
         <Hero />
         <Experience experience={experience}/>
         <Projects projects={projects}/>

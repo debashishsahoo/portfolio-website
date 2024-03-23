@@ -29,6 +29,7 @@
 }
 
 .itemDetails h3 {
+    display: flex;
     font-size: 30px;
     font-weight: 600;
 }
@@ -40,4 +41,10 @@
 
 .itemDetails li {
     list-style-type: disc;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }

@@ -10,6 +10,7 @@ export type Experience = {
 export type Project = {
     logoSrc: string,
     name: string,
+    url: string,
     tools: string[],
     startDate: string,
     endDate: string | null,

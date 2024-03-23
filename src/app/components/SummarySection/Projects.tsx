@@ -22,6 +22,7 @@ export default function Projects({ projects }: Props) {
                             key={id}
                             image={item.logoSrc}
                             title={item.name}
+                            url={item.url}
                             subtitle={item.tools}
                             startDate={item.startDate}
                             endDate={item.endDate}

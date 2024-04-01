@@ -32,9 +32,9 @@ export const experience: Experience[] = [
         "startDate": "Feb 2023",
         "endDate": "Nov 2023",
         "description": [
-            "Teaching the ‘FIT1045: Introduction to Programming’ unit that introduces programming fundamentals and practices using the Python language to ~2000 undergraduate computer science students per semester.",
-            "Administering applied classes with 50+ students, large workshops, and consultations to assist students with queries.",
-            "Marking student’s assignments and conducting interviews to assess their understanding of the material."
+            "Taught the ‘FIT1045: Introduction to Programming’ unit that introduces programming fundamentals and practices using the Python language to ~2000 undergraduate computer science students per semester.",
+            "Administered applied classes with 50+ students, large workshops, and consultations to assist students with queries.",
+            "Marked students' assignments and conducted interviews to assess their understanding of the material."
         ]
     },
     {

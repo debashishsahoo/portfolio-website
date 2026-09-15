@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from "next/image"
 import styles from "./Card.module.css";
+import type { Role } from "../../types/types";
 import { AiFillGithub } from "react-icons/ai";
 
 interface CardProps {
@@ -8,12 +9,18 @@ interface CardProps {
     title: string;
     url: string | null;
     subtitle: string | string[];
+    location?: string;
     startDate: string;
     endDate: string | null;
-    description: string[];
+    description?: string[];
+    roles?: Role[];
   }
 
-export default function Card({ image, title, url, subtitle, startDate, endDate, description }: CardProps) {
+function formatDates(startDate: string, endDate: string | null) {
+    return endDate ? `${startDate} — ${endDate}` : startDate;
+}
+
+export default function Card({ image, title, url, subtitle, location, startDate, endDate, description, roles }: CardProps) {
     return (
         <div className={styles.item}>    
             <div className={styles.image}>
@@ -27,18 +34,37 @@ export default function Card({ image, title, url, subtitle, startDate, endDate, 
 
             <div className={styles.itemDetails}>
                 <div className={styles.title}>
-                    <h3>{`${title}\u00A0`}</h3>
+                    <h3>{`${title} `}</h3>
                     {url ? <a href={url} target='_blank'> <AiFillGithub size="2.5em" /> </a> : null}
                 </div>
                 <h4>{Array.isArray(subtitle) ? `${subtitle.join(', ')}` : subtitle}</h4>
-                <p>{endDate ? `${startDate} — ${endDate}` : startDate}</p>
-                <ul>
-                    { 
-                        description.map((point, id) => {
-                            return <li key={id}> {point} </li>;
-                        }) 
-                    }
-                </ul>
+                <p>{location ? `${formatDates(startDate, endDate)} · ${location}` : formatDates(startDate, endDate)}</p>
+                { 
+                    description ? 
+                        <ul>
+                            { description.map((point, id) => <li key={id}> {point} </li>) }
+                        </ul> 
+                    : null 
+                }
+                { 
+                    roles ? 
+                        <div className={styles.roles}>
+                            { 
+                                roles.map((item: Role, id: number) => {
+                                    return (
+                                        <div className={styles.role} key={id}>
+                                            <h5>{item.role}</h5>
+                                            <p className={styles.roleDates}>{formatDates(item.startDate, item.endDate)}</p>
+                                            <ul>
+                                                { item.description.map((point, id) => <li key={id}> {point} </li>) }
+                                            </ul>
+                                        </div>
+                                    );
+                                })
+                            }
+                        </div> 
+                    : null 
+                }
             </div>
         </div>
     )

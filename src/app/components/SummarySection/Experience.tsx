@@ -1,5 +1,5 @@
 import React from 'react'
-import { Experience } from "../../types/types";
+import type { Experience } from "../../types/types";
 import Card from '../Card/Card';
 import styles from "./SummarySection.module.css";
 
@@ -24,9 +24,11 @@ export default function Experience({ experience }: Props) {
                             title={item.company}
                             url={null}
                             subtitle={item.role}
+                            location={item.location}
                             startDate={item.startDate}
                             endDate={item.endDate}
                             description={item.description}
+                            roles={item.roles}
                         />
                     );
                 })

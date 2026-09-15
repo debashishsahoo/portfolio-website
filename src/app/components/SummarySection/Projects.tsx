@@ -1,5 +1,5 @@
 import React from 'react'
-import { Project } from "../../types/types";
+import type { Project } from "../../types/types";
 import Card from '../Card/Card';
 import styles from "./SummarySection.module.css";
 

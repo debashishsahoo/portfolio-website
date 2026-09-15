@@ -22,6 +22,24 @@ updates:
           - "minor"
           - "patch"
 
+    # Major bumps that cannot build today. Each was opened by Dependabot,
+    # failed CI, and was closed. Minor and patch updates still flow through,
+    # so security fixes on these are not blocked unless they require the
+    # major. Re-check when the upstream blocker clears.
+    ignore:
+      # typescript-eslint (vendored inside eslint-config-next) hard-refuses
+      # TS 7: "typescript-eslint does not support TS 7.0".
+      - dependency-name: "typescript"
+        update-types: ["version-update:semver-major"]
+      # Same package is incompatible with ESLint 10:
+      # "TypeError: scopeManager.addGlobals is not a function".
+      - dependency-name: "eslint"
+        update-types: ["version-update:semver-major"]
+      # Tailwind 4 moves its PostCSS plugin to @tailwindcss/postcss and
+      # switches to CSS-first config; needs a migration, not a bump.
+      - dependency-name: "tailwindcss"
+        update-types: ["version-update:semver-major"]
+
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
